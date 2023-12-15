@@ -1,0 +1,42 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+}
+
+h1 {
+    background-color: rgb(92, 92, 223);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+li a {
+    background-color: darkblue;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+li a:hover {
+    background-color: blue;
+}
+
+img {
+    max-width: 200px;
+    height: auto;
+}

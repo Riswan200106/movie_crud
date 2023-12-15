@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <!--{% include 'base.html' %}-->
+    <div class="header">
+        <h1>MOVIE SECTION</h1>
+        <button><a href="{% url 'create' %}" class="home">Home</a></button>
+    </div>
+
+    <div class="section-list">
+        {% for movie_obj in movies %}
+
+            <div class="movie-item">
+                <h1>{{movie_obj.title | upper}}</h1>
+                <h3>{{movie_obj.summary | default:'it is an story about something'}}</h3>
+                <h3>{{movie_obj.year}}</h3>
+                <a href="{% url 'edit' movie_obj.id %}">Edit</a>
+                <a href="{% url 'delete' movie_obj.id %}">Delete</a>
+            </div>
+
+        {% endfor %}
+    </div>
+
+</body>
+</html>
+    
+
+    
+
+</body>
+</html>
+
+<!-- <td>
+        {% if movie_obj.poster %}
+    <img src="{{movie_obj.poster.url}}">
+    {% endif %}
+    </td>-->

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--{% include 'base.html' %}-->
+    <h1>CREATE SECTION</h1>
+    <button><a href="{% url 'list' %}" class="lis">list</a></button>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{frm.as_p}}             <!--  # here we write the form content as paragraph, that is from from which taken from models.   -->              
+       <button> CREATE BUTTON</button>  
+    </form>
+
+    <style> h1 { color: darkblue; font-family: 'Arial', sans-serif; } 
+    button { background-color: darkblue; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; } 
+    button:hover { background-color: blue; } 
+    form { background-color: lightgray; padding: 20px; border-radius: 5px; }
+    .lis{
+    background-color: darkblue;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-right: 10px;
+    border-radius: 5px;}
+    </style>
+    
+</body>
+</html>
